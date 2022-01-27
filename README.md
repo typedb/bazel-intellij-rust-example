@@ -17,7 +17,7 @@ The Rust plugin is built to work with Cargo projects, so to make it work with Ba
 
 The modified Bazel plugin detects `rust_binary` and `rust_library` targets, and its `intellij_info_aspect` generates Cargo.toml files in the Bazel sandbox based on the `CrateInfo` of these targets.
 
-The Rust plugin now sees `Cargo.toml` files in `bazel-bin` with `path` attributes such as `main.rs`. This allows `cargo` to detect project structure, but the source file paths that it detects are inaccurate - the sources aren't in the Bazel sandbox, they are in the project root. So it takes these `path` properties and maps them, from Bazel sandbox locations, to locations relative to the project root. This causes the plugin to treat the source folders as if they have Cargo.toml files in them with the correct properties, enabling code completion and navigation within the project.
+The Rust plugin now sees `Cargo.toml` files in `bazel-bin` with `path` attributes such as `main.rs`. This allows `cargo` to detect project structure, but the source file paths that it detects are inaccurate - the sources aren't in `bazel-bin`. So it takes these `path` properties and maps them, from Bazel sandbox locations, to locations relative to the project root. This causes the plugin to treat the source folders as if they have Cargo.toml files in them with the correct properties, enabling code completion and navigation within the project.
 
 External crates from https://crates.io are supported using [cargo-raze](https://github.com/google/cargo-raze) - see https://github.com/vaticle/bazel-intellij-rust-example/tree/master/dependencies/crates for a usage example.
 
