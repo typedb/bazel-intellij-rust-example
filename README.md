@@ -2,7 +2,7 @@
 
 ## Demo video
 
-https://user-images.githubusercontent.com/14253102/151390619-70578b38-bb57-463d-8f52-03b116701349.mov
+https://user-images.githubusercontent.com/14253102/151391801-a7551fcb-0322-4ed5-adc1-f11784a3b106.mov
 
 ## Architecture
 
